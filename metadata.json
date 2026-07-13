@@ -1,0 +1,6 @@
+{
+  "name": "Unnita Karmakar — Interactive 3D Portfolio",
+  "description": "High-performance interactive 3D collage portfolio for Unnita Karmakar, featuring hardware-accelerated mouse tracking, spring physics, and animated visual elements.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
