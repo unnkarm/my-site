@@ -47,7 +47,7 @@ export default function About() {
           <div className="lg:col-span-7">
             <FadeIn delay={0.2}>
               <h3 className="text-xs font-bold tracking-widest text-neutral-400 uppercase mb-4">
-                02 . FORMAL EDUCATION
+                02 . EDUCATION
               </h3>
               
               <div className="group relative bg-white border border-neutral-200/80 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
@@ -60,11 +60,13 @@ export default function About() {
 
                   <div className="flex-1">
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
-                      <h4 className="text-xl md:text-2xl font-bold text-black tracking-tight">
-                        Techno Main Salt Lake
-                      </h4>
+                      <div className="flex items-center gap-3">
+                        <h4 className="text-xl md:text-2xl font-bold text-black tracking-tight">
+                          Techno Main Salt Lake
+                        </h4>
+                      </div>
                       <span className="text-xs font-bold text-blue-600 bg-blue-50 px-3 py-1 rounded-full border border-blue-100 uppercase tracking-wider">
-                        2023 – 2027
+                        2024 – 2028
                       </span>
                     </div>
                     <p className="text-base font-semibold text-neutral-700 mb-1">
@@ -76,7 +78,7 @@ export default function About() {
                     
                     <div className="border-t border-neutral-100 pt-4 flex items-center gap-2 text-xs font-extrabold tracking-wider text-neutral-400 uppercase">
                       <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                      <span>Current Status: CSE Junior (3rd Year)</span>
+                      <span>Current Status: cs undergrad (3rd Year)</span>
                     </div>
                   </div>
 

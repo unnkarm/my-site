@@ -16,6 +16,7 @@ interface SkillItem {
 export default function Skills() {
   const allSkills: SkillItem[] = [
     { name: "C", slug: "c", colorClass: "hover:bg-slate-100 hover:text-slate-800 hover:border-slate-400" },
+    { name: "C++", slug: "cplusplus", colorClass: "hover:bg-slate-100 hover:text-slate-800 hover:border-slate-400" },
     { name: "Python", slug: "python", colorClass: "hover:bg-blue-50 hover:text-blue-600 hover:border-blue-400" },
     { name: "SQL", slug: "postgresql", colorClass: "hover:bg-sky-50 hover:text-sky-600 hover:border-sky-400" },
     { name: "Git", slug: "git", colorClass: "hover:bg-orange-50 hover:text-orange-600 hover:border-orange-400" },
@@ -27,7 +28,6 @@ export default function Skills() {
     { name: "Tailwind", slug: "tailwindcss", colorClass: "hover:bg-teal-50 hover:text-teal-600 hover:border-teal-400" },
     { name: "FastAPI", slug: "fastapi", colorClass: "hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-400" },
     { name: "PostgreSQL", slug: "postgresql", colorClass: "hover:bg-indigo-50 hover:text-indigo-600 hover:border-indigo-400" },
-    { name: "Redis", slug: "redis", colorClass: "hover:bg-rose-50 hover:text-rose-600 hover:border-rose-400" },
     { name: "NumPy", slug: "numpy", colorClass: "hover:bg-cyan-50 hover:text-cyan-700 hover:border-cyan-400" },
     { name: "Pandas", slug: "pandas", colorClass: "hover:bg-indigo-50 hover:text-indigo-800 hover:border-indigo-400" },
     { name: "Scikit-learn", slug: "scikitlearn", colorClass: "hover:bg-orange-50 hover:text-orange-500 hover:border-orange-400" },
@@ -40,8 +40,6 @@ export default function Skills() {
     { name: "Linux", slug: "linux", colorClass: "hover:bg-neutral-100 hover:text-neutral-800 hover:border-neutral-400" },
     { name: "AWS", slug: "amazonaws", colorClass: "hover:bg-amber-50 hover:text-amber-700 hover:border-amber-400" },
     { name: "GitHub Actions", slug: "githubactions", colorClass: "hover:bg-slate-50 hover:text-slate-700 hover:border-slate-400" },
-    { name: "Sports Analytics", colorClass: "hover:bg-emerald-50 hover:text-emerald-700 hover:border-emerald-400" },
-    { name: "AI-Driven Sports Applications", colorClass: "hover:bg-teal-50 hover:text-teal-700 hover:border-teal-400" },
   ];
 
   return (
@@ -53,9 +51,6 @@ export default function Skills() {
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-black">
               Technical <span className="font-serif italic font-normal text-blue-600">Skills</span>
             </h2>
-            <p className="text-xs font-bold text-neutral-400 uppercase tracking-widest">
-              Languages • Frameworks • ML Systems • Cloud
-            </p>
           </div>
         </FadeIn>
 
