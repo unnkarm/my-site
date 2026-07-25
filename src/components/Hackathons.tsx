@@ -128,15 +128,14 @@ export default function Hackathons() {
 
             {/* Vertically running asphalt track layout */}
             <div className="relative pl-14 md:pl-20 py-4 select-none">
-              
               {/* Racetrack asphalt layer */}
               <div className="absolute left-4 md:left-6 top-0 bottom-0 w-8 md:w-10 bg-neutral-900 rounded-full shadow-inner z-0 border-x-2 border-neutral-200">
-                {/* Center dashed racing line */}
-                <div 
+                <div
                   className="w-0.5 h-full mx-auto"
                   style={{
-                    backgroundImage: "linear-gradient(to bottom, #ffffff 0px, #ffffff 12px, transparent 12px, transparent 24px)",
-                    backgroundSize: "2px 24px"
+                    backgroundImage:
+                      "linear-gradient(to bottom, #ffffff 0px, #ffffff 12px, transparent 12px, transparent 24px)",
+                    backgroundSize: "2px 24px",
                   }}
                 />
               </div>
@@ -155,22 +154,13 @@ export default function Hackathons() {
                         >
                           {/* Interactive Track Marker on the asphalt racing lane */}
                           <motion.div
-                            className={`absolute left-[-52px] md:left-[-72px] w-10 h-10 md:w-11 md:h-11 rounded-full flex items-center justify-center font-extrabold text-xs border-2 border-white shadow-md z-20 ${
-                              isFlag
-                                ? "text-transparent shadow-neutral-400"
-                                : "bg-blue-600 text-white"
-                            }`}
-                            style={{
-                              backgroundImage: isFlag
-                                ? "linear-gradient(45deg, #000 25%, transparent 25%), linear-gradient(-45deg, #000 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #000 75%), linear-gradient(-45deg, transparent 75%, #000 75%)"
-                                : "none",
-                              backgroundSize: isFlag ? "8px 8px" : "auto",
-                              backgroundPosition: isFlag ? "0 0, 0 4px, 4px -4px, -4px 0px" : "auto",
-                            }}
-                            whileHover={{ scale: 1.2, rotate: isFlag ? 15 : -15 }}
-                            transition={{ type: "spring", stiffness: 400, damping: 15 }}
+                            className="absolute left-[-52px] md:left-[-72px] z-20 flex items-center justify-center"
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ type: "spring", stiffness: 400, damping: 20 }}
                           >
-                            {!isFlag && hack.marker}
+                            <div className="px-2 py-1 rounded-md bg-neutral-50 border border-neutral-150 text-xs font-bold text-neutral-800">
+                              {isFlag ? "🏁" : hack.marker}
+                            </div>
                           </motion.div>
 
                           {/* Hackathon metadata */}

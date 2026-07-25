@@ -52,7 +52,7 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-blue-600 selection:text-white relative">
-      {/* Interactive 3D Cursor-Following Floating Collage */}
+      {/* Interactive pixel cursor (restored without heavy outline/shadow) */}
       <FloatingCollage />
 
       {/* Navigation Header */}
