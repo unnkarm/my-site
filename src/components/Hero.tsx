@@ -38,6 +38,7 @@ export default function Hero() {
       id="hero"
       className="min-h-screen flex flex-col justify-between pt-32 pb-12 px-6 md:px-12 relative overflow-hidden bg-white select-none"
     >
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(15,23,42,0.03)_1px,_transparent_1px),linear-gradient(90deg,rgba(15,23,42,0.03)_1px,_transparent_1px)] bg-[length:40px_40px,40px_40px] opacity-120 pointer-events-none" />
       <div className="flex-1 flex flex-col justify-center max-w-4xl mx-auto w-full">
         <div className="flex flex-col items-center text-center w-full">
           {/* Centered Hero Content */}
