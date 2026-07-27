@@ -13,18 +13,12 @@ export default function Hackathons() {
   const experience: Experience[] = [
     {
       id: "exp-1",
-      role: "AI & Machine Learning Intern",
-      organization: "SportsTech Lab",
-      duration: "Dec 2025 – Present",
-      description: "Developing automatic pose estimation and object detection pipelines for real-time football player indexing. Fine-tuned lightweight classification heads on top of YOLO features.",
+      role: "SDE intern (Remote Part-Time)",
+      organization: "Zynvatech Solutions Pvt Lmtd",
+      duration: "March 2026-May 2026",
+      description: "Developed a full-stack web application for a client, implementing a responsive UI with React and integrating backend APIs using Node.js and Express.",
     },
-    {
-      id: "exp-2",
-      role: "Frontend Developer (Remote Part-Time)",
-      organization: "OpenSource Sports Foundation",
-      duration: "Jun 2025 – Nov 2025",
-      description: "Implemented high-performance interactive charts, canvas elements, and Framer Motion layouts for open source sports stats databases. Optimized rendering latency.",
-    },
+    
   ];
 
   const hackathons: Hackathon[] = [
@@ -55,6 +49,12 @@ export default function Hackathons() {
     {
       id: "hack-5",
       name: "Diversion",
+      year: "2026",
+      marker: "P5",
+    },
+    {
+      id: "hack-6",
+      name: "Solution Challenge",
       year: "2026",
       marker: "flag",
     },

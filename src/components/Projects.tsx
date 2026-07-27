@@ -13,53 +13,32 @@ export default function Projects() {
   const projects: Project[] = [
     {
       id: "project-1",
-      title: "AthletaVision: AI Sports Video Analyzer",
-      date: "November - December 2025",
+      title: "StrydeX: AI Sports Analytics Platform",
+      date: "2026",
       problem: "Traditional sports tactical analysis requires tedious, manual video tag-reviews and hand-written clip annotations.",
       solution: "Engineered an end-to-end automated action-recognition pipeline using PyTorch & OpenCV, streaming real-time analytics to a responsive React dashboard powered by FastAPI.",
       tech: ["Python", "FastAPI", "React", "PyTorch"],
       github: "https://github.com/unnita-karmakar/athletavision",
       demo: "https://github.com/unnita-karmakar/athletavision",
-      image: "https://images.unsplash.com/photo-1508098682722-e99c43a406b2?q=80&w=600&auto=format&fit=crop",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHghpvzSNLwjmsjnkEVde-TAKRMd0WnQpCxl2B8xBsnw&s=10",
     },
     {
       id: "project-2",
-      title: "ScriboScribe: Semantic RAG Assistant",
-      date: "November 2025",
+      title: "MindSaathi",
+      date: "2025",
       problem: "Students and researchers waste hundreds of hours filtering through dense journals and paper PDFs without a unified query database.",
       solution: "Developed an intelligent research coordinator using advanced Retrieval-Augmented Generation (RAG) with vector search databases to parse and cross-reference documents.",
       tech: ["PyTorch", "RAG Systems", "Vector Databases", "Docker"],
       github: "https://github.com/unnita-karmakar/scriboscribe",
       demo: "https://github.com/unnita-karmakar/scriboscribe",
-      image: "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?q=80&w=600&auto=format&fit=crop",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy8rJrSv45CKWLdglXxRuTF-WD0-ZMZ6BngH3Nysk-BQ&s=10",
     },
-    {
-      id: "project-3",
-      title: "ScoutFlow: Sports Metrics Platform",
-      date: "January 2026",
-      problem: "Local athletic clubs lack cohesive data tools to track, visualize, and accurately scout rising regional player talent.",
-      solution: "Built a high-performance scout tracking ecosystem with rich interactive dashboards, scalable PostgreSQL storage, and automated profile indexing.",
-      tech: ["Next.js", "PostgreSQL", "AWS", "FastAPI"],
-      github: "https://github.com/unnita-karmakar/scoutflow",
-      demo: "https://github.com/unnita-karmakar/scoutflow",
-      image: "https://images.unsplash.com/photo-1551854838-212c50b4c184?q=80&w=600&auto=format&fit=crop",
-    },
-    {
-      id: "project-4",
-      title: "TacticsEngine: Agentic Sports Planner",
-      date: "March 2026",
-      problem: "Scattered tournament historical playbooks are rarely leveraged to recommend dynamic strategies or dynamic counter-play tactics.",
-      solution: "Engineered multi-agent LLM systems that parse game history and weather variables to generate highly customized, responsive match tactical guidelines.",
-      tech: ["Scikit-learn", "Pandas", "Sports Analytics", "AI Agents"],
-      github: "https://github.com/unnita-karmakar/tacticsengine",
-      demo: "https://github.com/unnita-karmakar/tacticsengine",
-      image: "https://images.unsplash.com/photo-1541252260730-0412e8e2108e?q=80&w=600&auto=format&fit=crop",
-    },
+    
   ];
 
   return (
     <section id="projects" className="py-24 px-6 md:px-12 bg-neutral-50/30 border-y border-neutral-100">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Section Title */}
         <FadeIn className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black mb-4 select-none">
@@ -70,10 +49,10 @@ export default function Projects() {
           </p>
         </FadeIn>
 
-        {/* Projects Grid - Highly Compact 4-Column Layout */}
-        <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        {/* Projects Grid - Centered auto-fit layout */}
+        <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-6 justify-center">
           {projects.map((project) => (
-            <div key={project.id} className="h-full">
+            <div key={project.id} className="h-full w-full">
               <FadeInStaggerItem className="h-full">
                 <div className="group flex flex-col h-full bg-white border border-neutral-150 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 overflow-hidden text-left">
                   

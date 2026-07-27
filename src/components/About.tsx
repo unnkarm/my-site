@@ -6,7 +6,8 @@
 import React from "react";
 import { motion } from "motion/react";
 import { FadeIn } from "./MotionReveal";
-import { GraduationCap } from "lucide-react";
+import { GraduationCap, Image as ImageIcon } from "lucide-react";
+import { TECHNO_MAIN_LOGO_ASSET } from "../assets/images/techno_main_logo";
 
 export default function About() {
   return (
@@ -47,18 +48,35 @@ export default function About() {
           <div className="lg:col-span-7">
             <FadeIn delay={0.2}>
               <h3 className="text-xs font-bold tracking-widest text-neutral-400 uppercase mb-4">
-                02 . EDUCATION
+                02 . EDUCATION &amp; INSTITUTION LOGO ASSET
               </h3>
               
               <div className="group relative bg-white border border-neutral-200/80 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
                 <div className="flex flex-col sm:flex-row gap-6 items-start">
                   
-                  {/* Graduation Cap circular icon */}
-                  <div className="w-16 h-16 rounded-xl bg-blue-50 border border-blue-100 flex items-center justify-center text-blue-600 shrink-0 group-hover:scale-105 transition-transform duration-300">
-                    <GraduationCap className="w-8 h-8" />
+                  {/* Techno Main Salt Lake College Logo Asset Badge */}
+                  <div className="relative w-20 h-20 rounded-2xl bg-gradient-to-br from-blue-50 to-neutral-50 border border-neutral-200 p-2 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform duration-300 shadow-xs overflow-hidden">
+                    {TECHNO_MAIN_LOGO_ASSET ? (
+                      <img
+                        src={TECHNO_MAIN_LOGO_ASSET}
+                        alt="Techno Main Salt Lake Logo"
+                        className="w-full h-full object-contain rounded-xl"
+                        referrerPolicy="no-referrer"
+                      />
+                    ) : (
+                      /* Techno Main Emblem Crest SVG Logo */
+                      <svg className="w-full h-full" viewBox="0 0 100 100" fill="none">
+                        <path d="M50 8 L82 24 L82 70 L50 88 L18 70 L18 24 Z" fill="#2563eb" fillOpacity="0.08" stroke="#2563eb" strokeWidth="3" />
+                        <path d="M50 18 L74 31 L74 63 L50 76 L26 63 L26 31 Z" stroke="#1d4ed8" strokeWidth="2" strokeDasharray="3 2" />
+                        <path d="M34 46 C34 42 42 40 50 43 C58 40 66 42 66 46 L66 63 C58 60 50 62 50 62 C50 62 42 60 34 63 Z" fill="#1e40af" />
+                        <path d="M50 43 L50 62" stroke="#ffffff" strokeWidth="2" />
+                        <circle cx="50" cy="33" r="5" fill="#f59e0b" />
+                        <text x="50" y="75" textAnchor="middle" fill="#1e3a8a" fontSize="8" fontStyle="italic" fontWeight="bold">TMSL</text>
+                      </svg>
+                    )}
                   </div>
 
-                  <div className="flex-1">
+                  <div className="flex-1 w-full">
                     <div className="flex flex-wrap items-center justify-between gap-2 mb-2">
                       <div className="flex items-center gap-3">
                         <h4 className="text-xl md:text-2xl font-bold text-black tracking-tight">
@@ -76,9 +94,14 @@ export default function About() {
                       Kolkata, West Bengal
                     </p>
                     
-                    <div className="border-t border-neutral-100 pt-4 flex items-center gap-2 text-xs font-extrabold tracking-wider text-neutral-400 uppercase">
-                      <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-                      <span>Current Status: cs undergrad (3rd Year)</span>
+                    <div className="border-t border-neutral-100 pt-4 flex items-center justify-between gap-2 text-xs font-extrabold tracking-wider text-neutral-400 uppercase">
+                      <div className="flex items-center gap-2">
+                        <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
+                        <span>Current Status: cs undergrad (3rd Year)</span>
+                      </div>
+                      <span className="inline-flex items-center gap-1 text-[10px] text-blue-600 font-bold bg-blue-50/80 border border-blue-100 px-2 py-0.5 rounded-md">
+                        <ImageIcon className="w-3 h-3" /> Logo Asset Ready
+                      </span>
                     </div>
                   </div>
 
@@ -92,3 +115,4 @@ export default function About() {
     </section>
   );
 }
+
