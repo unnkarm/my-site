@@ -10,6 +10,7 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Hackathons from "./components/Hackathons";
+import GithubStats from "./components/GithubStats";
 import Footer from "./components/Footer";
 import FloatingCollage from "./components/FloatingCollage";
 
@@ -17,7 +18,7 @@ export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    const sectionIds = ["hero", "about", "skills", "projects", "hackathons", "footer"];
+    const sectionIds = ["hero", "about", "skills", "projects", "hackathons", "github-activity", "footer"];
     
     // Create intersection observers for each section
     const observers = sectionIds.map((id) => {
@@ -65,6 +66,7 @@ export default function App() {
         <Skills />
         <Projects />
         <Hackathons />
+        <GithubStats username="unnkarm" />
       </main>
 
       {/* Footer and Contacts */}

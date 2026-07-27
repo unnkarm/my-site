@@ -10,24 +10,28 @@ import { Mail, Linkedin, Github, FileText, ArrowUp } from "lucide-react";
 export default function Footer() {
   const socialLinks = [
     {
-      name: "LinkedIn",
-      href: "https://www.linkedin.com/in/your-profile", // Placeholder to replace
-      icon: <Linkedin className="w-4 h-4" />,
+      name: "GitHub",
+      href: "https://github.com/unnkarm",
+      handle: "@unnkarm",
+      icon: <Github className="w-4 h-4 text-slate-200" />,
     },
     {
-      name: "GitHub",
-      href: "https://github.com/your-username", // Placeholder to replace
-      icon: <Github className="w-4 h-4" />,
+      name: "LinkedIn",
+      href: "https://www.linkedin.com/in/unnita-karmakar-b216a9378",
+      handle: "Unnita Karmakar",
+      icon: <Linkedin className="w-4 h-4 text-blue-400" />,
     },
     {
       name: "Gmail",
-      href: "mailto:youremail@gmail.com",
-      icon: <Mail className="w-4 h-4" />,
+      href: "mailto:unnitakarmakar2005@gmail.com",
+      handle: "Email Me",
+      icon: <Mail className="w-4 h-4 text-rose-400" />,
     },
     {
-      name: "Resume",
-      href: "#",
-      icon: <FileText className="w-4 h-4" />,
+      name: "X / Twitter",
+      href: "https://x.com/unnkarm",
+      handle: "@unnkarm",
+      icon: <span className="font-bold text-xs">𝕏</span>,
     },
   ];
 
@@ -55,7 +59,7 @@ export default function Footer() {
                 Have a sports analytics concept, machine learning idea, or position you'd like to collaborate on? Let's connect!
               </p>
               <a
-                href="mailto:youremail@gmail.com"
+                href="mailto:unnitakarmakar2005@gmail.com"
                 className="inline-flex items-center gap-2.5 px-6 py-3 bg-white text-black border border-white rounded-full font-bold text-xs tracking-wider uppercase hover:bg-neutral-100 active:scale-95 transition-all duration-200 cursor-pointer"
               >
                 <Mail className="w-4 h-4" />
