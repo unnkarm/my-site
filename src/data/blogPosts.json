@@ -1,0 +1,29 @@
+[
+  {
+    "id": "post-1",
+    "title": "Optimizing Web Performance in React 19 Applications",
+    "summary": "Discover the latest enhancements in React 19 and how to leverage server components, optimized rendering paths, and asset loading to achieve perfect lighthouse scores.",
+    "date": "July 12, 2026",
+    "readingTime": "5 min read",
+    "tags": ["React", "Performance", "Frontend"],
+    "content": "React 19 brings exciting features that fundamentally change how we build applications. Key features include full support for Server Components, Actions API for form and data management, and dynamic stylesheets optimization.\n\n### Form Actions\nInstead of handling form submissions manually with `onSubmit` and state management, React 19 introduces direct handling through the `action` attribute:\n\n```tsx\n<form action={async (formData) => {\n  const name = formData.get(\"name\");\n  await updateProfile(name);\n}}>\n```\n\nThis automates error handling, loading states, and pending indicators using the new `useActionState` hook. In this portfolio, we've structured components to prioritize render efficiency and keep layout transitions lightweight."
+  },
+  {
+    "id": "post-2",
+    "title": "A Guide to Modern CSS and Tailwind CSS v4",
+    "summary": "Tailwind CSS v4 introduces a brand new engine built for speed, native cascade layer integration, and a clean CSS-first configuration pipeline.",
+    "date": "June 28, 2026",
+    "readingTime": "4 min read",
+    "tags": ["CSS", "Tailwind", "Design"],
+    "content": "Tailwind v4 is a significant rewrite, ditching JavaScript config files in favor of native CSS configurations. Now, everything is configured under `@theme` inside your main CSS file:\n\n```css\n@import \"tailwindcss\";\n\n@theme {\n  --font-sans: \"Inter\", sans-serif;\n  --color-primary: #2b46df;\n}\n```\n\nThis results in faster builds, smaller bundle sizes, and seamless integration with standard CSS modules. This portfolio is built directly using these v4 specifications, allowing us to leverage premium custom variables instantly."
+  },
+  {
+    "id": "post-3",
+    "title": "Mastering Motion and Micro-animations",
+    "summary": "How micro-animations improve user retention, visual flow, and how to create natural gestures using the new Motion library.",
+    "date": "May 15, 2026",
+    "readingTime": "6 min read",
+    "tags": ["Animation", "UX/UI", "Motion"],
+    "content": "Visual feedback guides the user's focus. However, animations must feel natural. The `motion` library (formerly Framer Motion) provides a highly performant declarative physics-based spring engine.\n\n### Dynamic Lists\nAnimating standard list reordering or entry transitions can be accomplished using `layout` and `<AnimatePresence>`:\n\n```tsx\n<motion.div layout>\n  {filteredItems.map(item => (\n    <motion.div key={item.id} layout />\n  ))}\n</motion.div>\n```\n\nUsing spring animations ensures that interrupts look fluid, preventing jarring layout shifts."
+  }
+]

@@ -1,8 +1,3 @@
-/**
- * @license
- * SPDX-License-Identifier: Apache-2.0
- */
-
 import { useState, useEffect } from "react";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
@@ -10,15 +5,17 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Hackathons from "./components/Hackathons";
+import Blog from "./components/Blog";
 import GithubStats from "./components/GithubStats";
 import Footer from "./components/Footer";
 import FloatingCollage from "./components/FloatingCollage";
+import SpotifyWidget from "./components/SpotifyWidget";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    const sectionIds = ["hero", "about", "skills", "projects", "hackathons", "github-activity", "footer"];
+    const sectionIds = ["hero", "about", "skills", "projects", "hackathons", "blog", "footer"];
     
     // Create intersection observers for each section
     const observers = sectionIds.map((id) => {
@@ -56,6 +53,9 @@ export default function App() {
       {/* Interactive pixel cursor (restored without heavy outline/shadow) */}
       <FloatingCollage />
 
+      {/* Floating Spotify widget overlay */}
+      <SpotifyWidget />
+
       {/* Navigation Header */}
       <Header activeSection={activeSection} />
 
@@ -66,6 +66,7 @@ export default function App() {
         <Skills />
         <Projects />
         <Hackathons />
+        <Blog />
         <GithubStats username="unnkarm" />
       </main>
 
@@ -74,4 +75,5 @@ export default function App() {
     </div>
   );
 }
+
 
