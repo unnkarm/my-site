@@ -27,7 +27,6 @@ export default function Header({ activeSection }: HeaderProps) {
     { id: "skills", label: "SKILLS" },
     { id: "projects", label: "PROJECTS" },
     { id: "hackathons", label: "EXPERIENCE" },
-    { id: "blog", label: "BLOG" },
     { id: "footer", label: "CONTACT" },
   ];
 
@@ -87,6 +86,41 @@ export default function Header({ activeSection }: HeaderProps) {
           </span>
           Open to Opportunities
         </div>
+      </div>
+
+      {/* Subtle web thread line and hanging spider decoration */}
+      <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-gradient-to-r from-transparent via-red-500/60 to-transparent pointer-events-none" />
+      <div className="absolute bottom-[-24px] right-24 pointer-events-none select-none md:block hidden">
+        <div className="w-[1px] h-6 bg-neutral-300 mx-auto" />
+        <motion.div
+          animate={{ rotate: [-12, 12, -12] }}
+          transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
+          className="w-5 h-5 flex items-center justify-center origin-top"
+        >
+          {/* Detailed Spider SVG */}
+          <svg
+            viewBox="0 0 24 24"
+            width="18"
+            height="18"
+            fill="none"
+            stroke="#e2111c"
+            strokeWidth="2.2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="drop-shadow-[0_1px_2px_rgba(0,0,0,0.15)]"
+          >
+            {/* Body */}
+            <circle cx="12" cy="14" r="3" fill="#e2111c" />
+            <circle cx="12" cy="8" r="1.5" fill="#e2111c" />
+            {/* Legs */}
+            <path d="M9 13 C 6 12, 5 9, 6 6" />
+            <path d="M9 14 C 5 14, 4 12, 5 9" />
+            <path d="M9 15 C 5 16, 4 18, 5 21" />
+            <path d="M15 13 C 18 12, 19 9, 18 6" />
+            <path d="M15 14 C 19 14, 20 12, 19 9" />
+            <path d="M15 15 C 19 16, 20 18, 19 21" />
+          </svg>
+        </motion.div>
       </div>
     </motion.header>
   );

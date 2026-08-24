@@ -46,4 +46,5 @@ export interface Hackathon {
   name: string;
   year: string;
   marker: string; // 'flag', 'P2', 'P3', etc.
+  certificateUrl?: string;
 }

@@ -23,6 +23,17 @@ export default function Projects() {
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQHghpvzSNLwjmsjnkEVde-TAKRMd0WnQpCxl2B8xBsnw&s=10",
     },
     {
+      id: "project-3",
+      title: "MeetPilot: AI Meeting Assistant",
+      date: "2025",
+      problem: "Teams struggle to keep track of key decisions, action items, and transcripts across multiple online video conferences.",
+      solution: "Developed an intelligent meeting assistant platform using real-time speech-to-text APIs and LLM summarization pipelines to automatically generate structured summaries and action items.",
+      tech: ["Next.js", "FastAPI", "OpenAI API", "WebRTC"],
+      github: "https://github.com/unnkarm",
+      demo: "https://github.com/unnkarm",
+      image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNFovtm2xXafHJ1DljctAEsS59GMduWxgfHsV7oxx_oOfjUFmTWAjRFCo&s=10",
+    },
+    {
       id: "project-2",
       title: "MindSaathi",
       date: "2025",
@@ -33,12 +44,11 @@ export default function Projects() {
       demo: "https://github.com/unnita-karmakar/scriboscribe",
       image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTy8rJrSv45CKWLdglXxRuTF-WD0-ZMZ6BngH3Nysk-BQ&s=10",
     },
-    
   ];
 
   return (
     <section id="projects" className="py-24 px-6 md:px-12 bg-neutral-50/30 border-y border-neutral-100">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-6xl mx-auto">
         {/* Section Title */}
         <FadeIn className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-black mb-4 select-none">
@@ -50,7 +60,7 @@ export default function Projects() {
         </FadeIn>
 
         {/* Projects Grid - Centered auto-fit layout */}
-        <FadeInStagger className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-[repeat(auto-fit,minmax(22rem,1fr))] gap-6 justify-center">
+        <FadeInStagger className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 justify-center">
           {projects.map((project) => (
             <div key={project.id} className="h-full w-full">
               <FadeInStaggerItem className="h-full">
@@ -148,6 +158,13 @@ export default function Projects() {
             </div>
           ))}
         </FadeInStagger>
+
+        {/* Footer notice under projects */}
+        <FadeIn className="text-center mt-16">
+          <p className="text-sm font-semibold text-neutral-400">
+            Follow <a href="https://github.com/unnkarm" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 hover:underline">GitHub</a> for more projects and collaborations
+          </p>
+        </FadeIn>
       </div>
     </section>
   );

@@ -5,17 +5,15 @@ import About from "./components/About";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Hackathons from "./components/Hackathons";
-import Blog from "./components/Blog";
 import GithubStats from "./components/GithubStats";
 import Footer from "./components/Footer";
-import FloatingCollage from "./components/FloatingCollage";
-import SpotifyWidget from "./components/SpotifyWidget";
+import SpideyInteractivity from "./components/SpideyInteractivity";
 
 export default function App() {
   const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    const sectionIds = ["hero", "about", "skills", "projects", "hackathons", "blog", "footer"];
+    const sectionIds = ["hero", "about", "skills", "projects", "hackathons", "footer"];
     
     // Create intersection observers for each section
     const observers = sectionIds.map((id) => {
@@ -50,11 +48,8 @@ export default function App() {
 
   return (
     <div className="min-h-screen bg-white text-black font-sans selection:bg-blue-600 selection:text-white relative">
-      {/* Interactive pixel cursor (restored without heavy outline/shadow) */}
-      <FloatingCollage />
-
-      {/* Floating Spotify widget overlay */}
-      <SpotifyWidget />
+      {/* Spider-Man interactive controls */}
+      <SpideyInteractivity />
 
       {/* Navigation Header */}
       <Header activeSection={activeSection} />
@@ -66,7 +61,6 @@ export default function App() {
         <Skills />
         <Projects />
         <Hackathons />
-        <Blog />
         <GithubStats username="unnkarm" />
       </main>
 

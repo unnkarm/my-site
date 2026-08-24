@@ -6,7 +6,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { FadeIn, FadeInStagger, FadeInStaggerItem } from "./MotionReveal";
-import { Trophy, Briefcase, Calendar } from "lucide-react";
+import { Trophy, Briefcase, Calendar, FileText, ExternalLink } from "lucide-react";
 import { Experience, Hackathon } from "../types";
 
 export default function Hackathons() {
@@ -18,7 +18,6 @@ export default function Hackathons() {
       duration: "March 2026-May 2026",
       description: "Developed a full-stack web application for a client, implementing a responsive UI with React and integrating backend APIs using Node.js and Express.",
     },
-    
   ];
 
   const hackathons: Hackathon[] = [
@@ -27,36 +26,56 @@ export default function Hackathons() {
       name: "Fear to Flow",
       year: "2025",
       marker: "flag", // Checkered flag
+      certificateUrl: "#",
     },
     {
       id: "hack-2",
       name: "Smart India Hackathon (SIH '25)",
       year: "2025",
       marker: "P2", // Pole position 2
+      certificateUrl: "#",
     },
     {
       id: "hack-3",
       name: "Educathon",
       year: "2025",
       marker: "P3",
+      certificateUrl: "#",
     },
     {
       id: "hack-4",
       name: "Impetus",
       year: "2026",
       marker: "P4",
+      certificateUrl: "#",
     },
     {
       id: "hack-5",
       name: "Diversion",
       year: "2026",
       marker: "P5",
+      certificateUrl: "#",
     },
     {
       id: "hack-6",
       name: "Solution Challenge",
       year: "2026",
       marker: "flag",
+      certificateUrl: "#",
+    },
+    {
+      id: "hack-7",
+      name: "Bharatiya Antariksh Hackathon",
+      year: "2025",
+      marker: "P7",
+      certificateUrl: "#",
+    },
+    {
+      id: "hack-8",
+      name: "IEM Hacks 4.0",
+      year: "2025",
+      marker: "P8",
+      certificateUrl: "#",
     },
   ];
 
@@ -113,6 +132,21 @@ export default function Hackathons() {
                 </div>
               ))}
             </FadeInStagger>
+
+            {/* Offer Letter Section */}
+            <FadeIn delay={0.2}>
+              <div className="mt-6 pl-6 text-sm">
+                <a
+                  href="#" // User can replace with direct link
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-1.5 font-bold text-blue-600 hover:text-blue-700 hover:underline transition-colors"
+                >
+                  <span>📄 View Zynvatech Offer Letter</span>
+                  <ExternalLink className="w-3.5 h-3.5" />
+                </a>
+              </div>
+            </FadeIn>
           </div>
 
           {/* Hackathons Race Track Section on Right */}
@@ -164,10 +198,21 @@ export default function Hackathons() {
                           </motion.div>
 
                           {/* Hackathon metadata */}
-                          <div className="flex flex-col gap-0.5">
+                          <div className="flex flex-col gap-1 items-start">
                             <span className="font-bold text-neutral-800 text-sm md:text-base">
                               {hack.name}
                             </span>
+                            {hack.certificateUrl && (
+                              <a
+                                href={hack.certificateUrl}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-1 text-[10px] font-bold text-blue-600 hover:text-blue-700 transition-colors mt-0.5"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                View Certificate →
+                              </a>
+                            )}
                           </div>
                           <span className="font-serif italic text-sm text-blue-600 font-bold shrink-0">
                             {hack.year}

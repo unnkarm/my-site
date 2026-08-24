@@ -6,7 +6,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { FadeIn } from "./MotionReveal";
-import { GraduationCap, Image as ImageIcon } from "lucide-react";
+import { GraduationCap } from "lucide-react";
 import { TECHNO_MAIN_LOGO_ASSET } from "../assets/images/techno_main_logo";
 
 export default function About() {
@@ -48,7 +48,7 @@ export default function About() {
           <div className="lg:col-span-7">
             <FadeIn delay={0.2}>
               <h3 className="text-xs font-bold tracking-widest text-neutral-400 uppercase mb-4">
-                02 . EDUCATION &amp; INSTITUTION LOGO ASSET
+                02 . EDUCATION
               </h3>
               
               <div className="group relative bg-white border border-neutral-200/80 rounded-2xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300">
@@ -99,9 +99,6 @@ export default function About() {
                         <span className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
                         <span>Current Status: cs undergrad (3rd Year)</span>
                       </div>
-                      <span className="inline-flex items-center gap-1 text-[10px] text-blue-600 font-bold bg-blue-50/80 border border-blue-100 px-2 py-0.5 rounded-md">
-                        <ImageIcon className="w-3 h-3" /> Logo Asset Ready
-                      </span>
                     </div>
                   </div>
 

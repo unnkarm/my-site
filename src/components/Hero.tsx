@@ -43,9 +43,9 @@ export default function Hero() {
         <div className="flex flex-col items-center text-center w-full">
           {/* Centered Hero Content */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            initial={{ opacity: 0, y: -250, rotate: -6, transformOrigin: "top center" }}
+            animate={{ opacity: 1, y: 0, rotate: 0 }}
+            transition={{ type: "spring", stiffness: 120, damping: 12, mass: 0.9 }}
             className="flex flex-col items-center text-center"
           >
             {/* Elegant Sub-Tag that floats constantly */}
@@ -115,8 +115,7 @@ export default function Hero() {
                 ease: "easeInOut"
               }}
             >
-              CS Undergrad Student passionate about high-performance software
-              architecture, ML systems, and gorgeous interactive designs.
+              CS Undergrad building high-performance systems by day, weaving interactive user experiences by night.
             </motion.p>
 
             {/* CTA Buttons */}
